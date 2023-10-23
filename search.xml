@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<search> 
+  
+  
+    
+    <entry>
+      <title>小新16pro换硬盘重装系统时遇到boot_faild</title>
+      <link href="/2023/10/23/%E5%B0%8F%E6%96%B016pro%E6%8D%A2%E7%A1%AC%E7%9B%98%E9%87%8D%E8%A3%85%E7%B3%BB%E7%BB%9F%E6%97%B6%E9%81%87%E5%88%B0boot-faild/"/>
+      <url>/2023/10/23/%E5%B0%8F%E6%96%B016pro%E6%8D%A2%E7%A1%AC%E7%9B%98%E9%87%8D%E8%A3%85%E7%B3%BB%E7%BB%9F%E6%97%B6%E9%81%87%E5%88%B0boot-faild/</url>
+      
+        <content type="html"><![CDATA[]]></content>
+      
+      
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>开学小记</title>
+      <link href="/2023/10/07/%E5%BC%80%E5%AD%A6%E5%B0%8F%E8%AE%B0/"/>
+      <url>/2023/10/07/%E5%BC%80%E5%AD%A6%E5%B0%8F%E8%AE%B0/</url>
+      
+        <content type="html"><![CDATA[<h1 id="开学小记"><a href="#开学小记" class="headerlink" title="开学小记"></a>开学小记</h1><p>烦</p><h2 id="无课，空白前几周"><a href="#无课，空白前几周" class="headerlink" title="无课，空白前几周"></a>无课，空白前几周</h2><p>  开学之后有很多事情需要去做，但又不知道去做什么，而且刚开学的前几周课程还少，学习的课程又少，想要提前去学又不太想，可能自己还是懒惰了点，但我自我感觉还好的。</p><h2 id="实验室招新准备工作"><a href="#实验室招新准备工作" class="headerlink" title="实验室招新准备工作"></a>实验室招新准备工作</h2><p>然后又想要进一个网络安全的实验室，本来暑假想好好 准备一下的，但又是毫无行动，开学之后就开始着急忙慌的去学习，可能也是弥补我之前的愧疚吧，也或是开学之后也不想浑浑噩噩的度过前几周，但学习的路又不太顺，我把python，php，html，css什么的都看了一点，稍微可以写一点一点的东西，但又真到网络安全的门口，我发现我好像什么也不会，就开始学习sql注入，学着学着我感觉我需要使用虚拟机，于是又开始了虚拟机的路程，在配置dvwa后，开始部署sqli-labs这个靶场，开始由于kali2他的php是8.2导致我的sqli-labs不能使用，我又去找kali2如何改换php为5.x，但没有用，我又去找适用于kali2desqli-labs改版，虽然成功setup,但网页根本用不了，也不会报错，也没有反馈，我甚至因为是第一题改成了盲注，知道我发现接下来的几题都是这样，我gg了，就挺烦，我就尝试用DVWA自己的，很不好用的感觉，我也佛了，就先在这搁置了。</p><h2 id="博客搭建半搭不搭"><a href="#博客搭建半搭不搭" class="headerlink" title="博客搭建半搭不搭"></a>博客搭建半搭不搭</h2><p>在网上看到了hexo+github+netlify+cloudlfare的搭建博客方法，正好自己也一直想搭建博客就开始行动了，但博客搭建过程也是一把辛酸泪。netlify登录不上，github没有被hexo d命令部署，netlify部署网点失败，其实在我第一次的尝试中netlify部署网点成功了，但这几次都没成功，不知道为什么，我现在把netlify放弃了。阿里云的域名解析还没成功。虽然有很多缺陷吧，但至少我现在正在写博客吧，也算是搭建了半个吧。</p>]]></content>
+      
+      
+      
+        <tags>
+            
+            <tag> 杂记 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+  
+  
+</search>

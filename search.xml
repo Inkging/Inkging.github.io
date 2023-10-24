@@ -4,9 +4,9 @@
   
     
     <entry>
-      <title>小新16pro换硬盘重装系统时遇到boot_faild</title>
-      <link href="/2023/10/23/%E5%B0%8F%E6%96%B016pro%E6%8D%A2%E7%A1%AC%E7%9B%98%E9%87%8D%E8%A3%85%E7%B3%BB%E7%BB%9F%E6%97%B6%E9%81%87%E5%88%B0boot-faild/"/>
-      <url>/2023/10/23/%E5%B0%8F%E6%96%B016pro%E6%8D%A2%E7%A1%AC%E7%9B%98%E9%87%8D%E8%A3%85%E7%B3%BB%E7%BB%9F%E6%97%B6%E9%81%87%E5%88%B0boot-faild/</url>
+      <title>小新16pro换硬盘重装系统时遇到boot_failed</title>
+      <link href="/2023/10/23/%E5%B0%8F%E6%96%B016pro%E6%8D%A2%E7%A1%AC%E7%9B%98%E9%87%8D%E8%A3%85%E7%B3%BB%E7%BB%9F%E6%97%B6%E9%81%87%E5%88%B0boot-failed/"/>
+      <url>/2023/10/23/%E5%B0%8F%E6%96%B016pro%E6%8D%A2%E7%A1%AC%E7%9B%98%E9%87%8D%E8%A3%85%E7%B3%BB%E7%BB%9F%E6%97%B6%E9%81%87%E5%88%B0boot-failed/</url>
       
         <content type="html"><![CDATA[<p>今天在给小新换完硬盘，重装系统（我将系统安在新硬盘中的），准备美美地开机启动是，发生了以下错误<br><img src="/89dfd488d43f8794579b061f941b0ef41bd53a31.jpg" alt="Alt text"><br><img src="/cb380ef431adcbefe0503037eaaf2edda3cc9f31.jpg" alt="Alt text"></p><blockquote><p>由于当时没拍照，从贴吧找到了与自己问题一样的图片，原帖为<a href="https://www.tieba.com/p/8547984766?pid=148326191477&cid=0#148326191477">https://www.tieba.com/p/8547984766?pid=148326191477&amp;cid=0#148326191477</a></p></blockquote><br />在用pe反复安装几次系统，有修复系统等等行为之后，依旧是这样的页面，在查找半天无果后，我想到一个问题。<br /><br />由于小新16pro只有一块硬盘，在更换硬盘之后，在新硬盘中是完全格式化的，只有一个系统iso，所以他是没有引导的，也就是你需要在你的新盘中加一个efi卷，作为引导，这样才能顺利安装。efi需要在pe中的分区管理中加入。在加入好了之后重启，也许会跳一个block，你只要把U盘拔下来重启即可。]]></content>
       

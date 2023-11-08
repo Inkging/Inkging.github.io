@@ -4,6 +4,25 @@
   
     
     <entry>
+      <title>upload-labs</title>
+      <link href="/2023/11/08/upload-labs/"/>
+      <url>/2023/11/08/upload-labs/</url>
+      
+        <content type="html"><![CDATA[<h1 id="Pass-01-Pass-02"><a href="#Pass-01-Pass-02" class="headerlink" title="Pass-01 Pass-02"></a>Pass-01 Pass-02</h1><p>上传php文件说不允许上传。<br><img src="/2023/11/08/upload-labs/1.png" alt="Alt text"><br>先将php文件后缀改为jpg后缀，在上传文件时用burpsuite抓包<br><img src="/2023/11/08/upload-labs/2.png" alt="Alt text"><br>在该处再将jpg改为php，则能够成功上传，然后就可以使用webshell管理器了<br><img src="/2023/11/08/upload-labs/3.png" alt="Alt text"></p><h1 id="Pass-03"><a href="#Pass-03" class="headerlink" title="Pass-03"></a>Pass-03</h1><p><img src="/2023/11/08/upload-labs/4.png" alt="Alt text"><br>这次抓包之后改名字也不好用了，经过阅读源码之后发现作者设置了黑名单机制，即不能上传的文件中在进入数据库前对他进行审核，如果包含着这几个字符就不给移动操作，报出文件名错误的反馈。<br>我们只要不将文件名设为php即可，我们可以设为php1，phtml等。<br><img src="/2023/11/08/upload-labs/5.png" alt="Alt text"><br>这就直接上传成功了！，然后就可以美滋滋的用webshel管理器获得数据了。<br>我这出了点小问题，就是我可以发现1.php7已经被解析了，但蚁剑连接不上，冰蝎也不行，感觉可能是软件出了问题，因为我将php7改为php也没用。<br><img src="/2023/11/08/upload-labs/6.png" alt="Alt text"></p><h1 id="Pass-04"><a href="#Pass-04" class="headerlink" title="Pass-04"></a>Pass-04</h1><p>我直接上传1.php7成功了，没想到能直接上传，但也出现了和上一题一样的问题。<br>但是这题有很多屏蔽，只不过php7恰好躲过去了，可以使用上传.htaccess文件,在里面写一句话</p><blockquote><p>AddType application&#x2F;x-httpd-php .jpg</p></blockquote><p>这句话的意思是将jpg文件全部解析为php文件,所以我们只要上传一个.htaccess文件和一个经过改名为.jpg的.php文件就好了\</p><h1 id="Pass-05"><a href="#Pass-05" class="headerlink" title="Pass-05"></a>Pass-05</h1><p>好的,php7通杀了,黑名单里还是没有这个后缀.</p><p>但看完网上的一些讲解之后发现我们其实可以在php后再加一个点构成</p><blockquote><p>.php.</p></blockquote><p>这样代码匹配最后一个点时,就可以把php保住了.</p><p>然后我发现第三题那个问题不是文件问题,就是蚁剑他们出问题了,因为我重新做了第一题和第二题也连不上了.</p>]]></content>
+      
+      
+      
+        <tags>
+            
+            <tag> 文件上传 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>小新16pro换硬盘重装系统时遇到boot_failed</title>
       <link href="/2023/11/08/%E5%B0%8F%E6%96%B016pro%E6%8D%A2%E7%A1%AC%E7%9B%98%E9%87%8D%E8%A3%85%E7%B3%BB%E7%BB%9F%E6%97%B6%E9%81%87%E5%88%B0boot-failed/"/>
       <url>/2023/11/08/%E5%B0%8F%E6%96%B016pro%E6%8D%A2%E7%A1%AC%E7%9B%98%E9%87%8D%E8%A3%85%E7%B3%BB%E7%BB%9F%E6%97%B6%E9%81%87%E5%88%B0boot-failed/</url>
@@ -27,7 +46,7 @@
       <link href="/2023/11/07/%E5%8D%81%E6%9C%88/"/>
       <url>/2023/11/07/%E5%8D%81%E6%9C%88/</url>
       
-        <content type="html"><![CDATA[<h1 id="十月小记"><a href="#十月小记" class="headerlink" title="十月小记"></a>十月小记</h1><p>苦哇哇的过完了十月，主要之前一段时间挺迷茫，不知所措的，幸好我哥及时对我进行了学习上的鞭打，让我稍微的找回了一点方向。</p><h2 id="考研"><a href="#考研" class="headerlink" title="考研"></a>考研</h2><p>终究还是没绕过去考研这个话题，不过经过我哥的点拨之后，我也觉得考研挺有意义的，他不是单纯的让你多在学校里多待一段时间，而是可以深入去学习去了解</p>]]></content>
+        <content type="html"><![CDATA[<h1 id="十月小记"><a href="#十月小记" class="headerlink" title="十月小记"></a>十月小记</h1><p>苦哇哇的过完了十月，主要之前一段时间挺迷茫，不知所措的，幸好我哥及时对我进行了学习上的鞭打，让我稍微的找回了一点方向。</p><h2 id="考研"><a href="#考研" class="headerlink" title="考研"></a>考研</h2><p>终究还是没绕过去考研这个话题，不过经过我哥的点拨之后，我也觉得考研挺有意义的，他不是单纯的让你多在学校里多待一段时间，而是可以深入去学习去了解我想要学习的方向,忽然就感觉很有意义,也很有必要,因为计算机这个面太广了,光了解就要不少时间了,更何况学校课都没开全,挺难绷的.</p><h2 id="网络安全的学习"><a href="#网络安全的学习" class="headerlink" title="网络安全的学习"></a>网络安全的学习</h2><p>等了很久的实验室招新依旧没有消息,就又去找了另一名学长,学长表示因为实验室人都不在,基本都在外面实习,招新可能要等到下个学期了,那我就再等等吧,不过学长丢了套系统的网络安全的学习视频,够我撑过一段时间了,我也在稳步的学习,也做过了几个靶场了,像sql-labs,xss-lasb,upload-labs,这些我基本都做完了,虽然是看着网上教程来边看边做的,但我依旧觉得提升不少,然后开始重做一遍,边做边写个笔记,感觉理解更深了,就是代码阅读还有点难受,但慢慢的好很多了.</p>]]></content>
       
       
       

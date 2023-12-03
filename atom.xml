@@ -6,7 +6,7 @@
   <link href="https://inkging.github.io/atom.xml" rel="self"/>
   
   <link href="https://inkging.github.io/"/>
-  <updated>2023-11-26T10:06:15.214Z</updated>
+  <updated>2023-12-03T06:23:57.405Z</updated>
   <id>https://inkging.github.io/</id>
   
   <author>
@@ -15,6 +15,23 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>try</title>
+    <link href="https://inkging.github.io/2023/12/03/try/"/>
+    <id>https://inkging.github.io/2023/12/03/try/</id>
+    <published>2023-12-03T06:23:28.000Z</published>
+    <updated>2023-12-03T06:23:57.405Z</updated>
+    
+    
+    <summary type="html">有东西被加密了, 请输入密码查看.</summary>
+    
+    
+    
+    
+    <category term="try" scheme="https://inkging.github.io/tags/try/"/>
+    
+  </entry>
   
   <entry>
     <title>sqli-labs大闯关</title>

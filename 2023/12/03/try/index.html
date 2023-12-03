@@ -11,7 +11,7 @@
   
   <title>
     
-      archive_a: 2023/11 
+      try 
       
       
       |
@@ -103,77 +103,134 @@
 
 
       <div class="flex-container">
-        <!-- 归档页，展示本站所有文章，按照年份降序归类，url形式：https://yoursite/archives/ -->
+        <!-- 文章详情页，展示文章具体内容，url形式：https://yoursite/文章标题/ -->
+<!-- 同时为「标签tag」，「朋友friend」，「分类categories」，「关于about」页面的承载页面，具体展示取决于page.type -->
 
-<!-- last: 按年份把文章分组，当前遍历到的年份 -->
-<!-- now: 当前遍历到的文章的发布年份 -->
 
-<div class="container archives">
-  <div class="post-list">
-    
-        <!-- 后续文章的发布年份呈现 -->
-        <div class="content-title">
-          <h2>
-            <span>2023</span>
-          </h2>
+  <!-- LaTex Display -->
+
+  
+    <script async type="text/javascript" src="/plugins/mathjax/tex-chtml.js"></script>
+  
+  <script>
+    MathJax = {
+      tex: {
+        inlineMath: [['$', '$'], ['\\(', '\\)']]
+      }
+    }
+  </script>
+
+
+
+
+
+  <!-- clipboard -->
+
+  
+    <script async type="text/javascript" src="/plugins/clipboard.min.js"></script>
+  
+  
+<script src="/js/codeCopy.js"></script>
+
+
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+  <!-- 文章内容页 url形式：https://yoursite/文章标题/ -->
+  <div class="container post-details" id="post-details">
+    <div class="post-content">
+      <div class="post-title">try</div>
+      <div class="post-attach">
+        <span class="post-pubtime">
+          <i class="iconfont icon-updatetime mr-10" title="Update time"></i>
+          2023-12-03 14:23:57
+        </span>
+        
+              <span class="post-tags">
+                <i class="iconfont icon-tags mr-10" title="Tags"></i>
+                
+                <span class="span--tag mr-8">
+                  <a href="/tags/try/" title="try">
+                    #try
+                  </a>
+                </span>
+                
+              </span>
+          
+      </div>
+      <div class="markdown-body">
+        <div class="hbe hbe-container" id="hexo-blog-encrypt" data-wpm="抱歉, 这个密码看着不太对, 请再试试." data-whm="抱歉, 这个文章不能被校验, 不过您还是能看看解密后的内容">
+  <script id="hbeData" type="hbeData" data-hmacdigest="fcca300c3c3071a4004b4402fc95976c29d69271eaabdb134572d1dd762a3462">da2f181317e2e095e4f39e267580458e259ef2ebdd8f22120d62ca04f700db3c709afd2e24e7600e7178b37d9d1a33e1</script>
+  <div class="hbe hbe-content">
+    <div class="hbe hbe-input hbe-input-default">
+      <input class="hbe hbe-input-field hbe-input-field-default" type="password" id="hbePass">
+      <label class="hbe hbe-input-label hbe-input-label-default" for="hbePass">
+        <span class="hbe hbe-input-label-content hbe-input-label-content-default">您好, 这里需要密码.</span>
+      </label>
+    </div>
+  </div>
+</div>
+<script data-pjax src="/lib/hbe.js"></script><link href="/css/hbe.style.css" rel="stylesheet" type="text/css">
+      </div>
+      
+        <div class="prev-or-next">
+          <div class="post-foot-next">
+            
+              <a href="/2023/11/25/sqli-labs%E5%A4%A7%E9%97%AF%E5%85%B3/" target="_self">
+                <i class="iconfont icon-chevronleft"></i>
+                <span>Prev</span>
+              </a>
+            
+          </div>
+          <div class="post-attach">
+            <span class="post-pubtime">
+              <i class="iconfont icon-updatetime mr-10" title="Update time"></i>
+              2023-12-03 14:23:57
+            </span>
+            
+                  <span class="post-tags">
+                    <i class="iconfont icon-tags mr-10" title="Tags"></i>
+                    
+                    <span class="span--tag mr-8">
+                      <a href="/tags/try/" title="try">
+                        #try
+                      </a>
+                    </span>
+                    
+                  </span>
+              
+          </div>
+          <div class="post-foot-prev">
+            
+          </div>
         </div>
       
-      <div class="post-item" title="try">
-        <div class="time-m-d">12-03</div>
-        <div class="title">
-          <a href="/2023/12/03/try/">
-            <span>try</span>
-          </a>
-        </div>
-      </div>
+    </div>
     
-      <div class="post-item" title="sqli-labs大闯关">
-        <div class="time-m-d">11-25</div>
-        <div class="title">
-          <a href="/2023/11/25/sqli-labs%E5%A4%A7%E9%97%AF%E5%85%B3/">
-            <span>sqli-labs大闯关</span>
-          </a>
-        </div>
-      </div>
+
     
-      <div class="post-item" title="upload-labs">
-        <div class="time-m-d">11-08</div>
-        <div class="title">
-          <a href="/2023/11/08/upload-labs/">
-            <span>upload-labs</span>
-          </a>
-        </div>
-      </div>
-    
-      <div class="post-item" title="小新16pro换硬盘重装系统时遇到boot_failed">
-        <div class="time-m-d">11-08</div>
-        <div class="title">
-          <a href="/2023/11/08/%E5%B0%8F%E6%96%B016pro%E6%8D%A2%E7%A1%AC%E7%9B%98%E9%87%8D%E8%A3%85%E7%B3%BB%E7%BB%9F%E6%97%B6%E9%81%87%E5%88%B0boot-failed/">
-            <span>小新16pro换硬盘重装系统时遇到boot_failed</span>
-          </a>
-        </div>
-      </div>
-    
-      <div class="post-item" title="十月">
-        <div class="time-m-d">11-07</div>
-        <div class="title">
-          <a href="/2023/11/07/%E5%8D%81%E6%9C%88/">
-            <span>十月</span>
-          </a>
-        </div>
-      </div>
-    
-      <div class="post-item" title="开学小记">
-        <div class="time-m-d">10-07</div>
-        <div class="title">
-          <a href="/2023/10/07/%E5%BC%80%E5%AD%A6%E5%B0%8F%E8%AE%B0/">
-            <span>开学小记</span>
-          </a>
-        </div>
+      <div class="comments-container">
+        
+
+
+
+
+
+
+
       </div>
     
   </div>
-</div>
+
 
         
 <div class="footer">

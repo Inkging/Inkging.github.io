@@ -154,6 +154,25 @@
     </entry>
     
     
+    
+    <entry>
+      <title>概率论目录</title>
+      <link href="/2023/10/07/%E6%A6%82%E7%8E%87%E8%AE%BA/"/>
+      <url>/2023/10/07/%E6%A6%82%E7%8E%87%E8%AE%BA/</url>
+      
+        <content type="html"><![CDATA[<h1 id="第一章-概率论的基本概念"><a href="#第一章-概率论的基本概念" class="headerlink" title="第一章 概率论的基本概念"></a>第一章 概率论的基本概念</h1><h2 id="第一节样本空间、随机事件"><a href="#第一节样本空间、随机事件" class="headerlink" title="第一节样本空间、随机事件"></a>第一节样本空间、随机事件</h2><h2 id="第二节概率、古典概型"><a href="#第二节概率、古典概型" class="headerlink" title="第二节概率、古典概型"></a>第二节概率、古典概型</h2><h2 id="第三节条件概率、全概率公式"><a href="#第三节条件概率、全概率公式" class="headerlink" title="第三节条件概率、全概率公式"></a>第三节条件概率、全概率公式</h2><h2 id="第四节独立性"><a href="#第四节独立性" class="headerlink" title="第四节独立性"></a>第四节独立性</h2><h1 id="第二章随机变量"><a href="#第二章随机变量" class="headerlink" title="第二章随机变量"></a>第二章随机变量</h1><h2 id="第一节随机变量及其分布函数"><a href="#第一节随机变量及其分布函数" class="headerlink" title="第一节随机变量及其分布函数"></a>第一节随机变量及其分布函数</h2><h2 id="第二节离散型随机变量及其分布"><a href="#第二节离散型随机变量及其分布" class="headerlink" title="第二节离散型随机变量及其分布"></a>第二节离散型随机变量及其分布</h2><h2 id="第三节连续型随机变量及其分布"><a href="#第三节连续型随机变量及其分布" class="headerlink" title="第三节连续型随机变量及其分布"></a>第三节连续型随机变量及其分布</h2><h2 id="第四节随机变量函数的分布"><a href="#第四节随机变量函数的分布" class="headerlink" title="第四节随机变量函数的分布"></a>第四节随机变量函数的分布</h2><h1 id="第三章随机向量"><a href="#第三章随机向量" class="headerlink" title="第三章随机向量"></a>第三章随机向量</h1><h2 id="第一节二维随机向量及其分布"><a href="#第一节二维随机向量及其分布" class="headerlink" title="第一节二维随机向量及其分布"></a>第一节二维随机向量及其分布</h2><h2 id="第二节边缘分布"><a href="#第二节边缘分布" class="headerlink" title="第二节边缘分布"></a>第二节边缘分布</h2><h2 id="第三节条件分布"><a href="#第三节条件分布" class="headerlink" title="第三节条件分布"></a>第三节条件分布</h2><h2 id="第四节随机变量的独立性"><a href="#第四节随机变量的独立性" class="headerlink" title="第四节随机变量的独立性"></a>第四节随机变量的独立性</h2><h2 id="第五节两个随机变量函数的分布"><a href="#第五节两个随机变量函数的分布" class="headerlink" title="第五节两个随机变量函数的分布"></a>第五节两个随机变量函数的分布</h2><h1 id="第四章随机变量的数字特征"><a href="#第四章随机变量的数字特征" class="headerlink" title="第四章随机变量的数字特征"></a>第四章随机变量的数字特征</h1><h2 id="第一节数学期望"><a href="#第一节数学期望" class="headerlink" title="第一节数学期望"></a>第一节数学期望</h2><h2 id="第二节方差"><a href="#第二节方差" class="headerlink" title="第二节方差"></a>第二节方差</h2><h2 id="第三节协方差与相关系数"><a href="#第三节协方差与相关系数" class="headerlink" title="第三节协方差与相关系数"></a>第三节协方差与相关系数</h2><h2 id="第四节矩、协方差矩阵"><a href="#第四节矩、协方差矩阵" class="headerlink" title="第四节矩、协方差矩阵"></a>第四节矩、协方差矩阵</h2><h1 id="第五章大数定律与中心极限定理"><a href="#第五章大数定律与中心极限定理" class="headerlink" title="第五章大数定律与中心极限定理"></a>第五章大数定律与中心极限定理</h1><h2 id="第一节大数定律"><a href="#第一节大数定律" class="headerlink" title="第一节大数定律"></a>第一节大数定律</h2><h2 id="第二节中心极限定理"><a href="#第二节中心极限定理" class="headerlink" title="第二节中心极限定理"></a>第二节中心极限定理</h2><h1 id="第六章数理统计的基本概念"><a href="#第六章数理统计的基本概念" class="headerlink" title="第六章数理统计的基本概念"></a>第六章数理统计的基本概念</h1><h2 id="第一节随机样本"><a href="#第一节随机样本" class="headerlink" title="第一节随机样本"></a>第一节随机样本</h2><h2 id="第二节抽样分布"><a href="#第二节抽样分布" class="headerlink" title="第二节抽样分布"></a>第二节抽样分布</h2><h1 id="第七章参数估计"><a href="#第七章参数估计" class="headerlink" title="第七章参数估计"></a>第七章参数估计</h1><h2 id="第一节点估计"><a href="#第一节点估计" class="headerlink" title="第一节点估计"></a>第一节点估计</h2><h2 id="第二节估计量的评价标准"><a href="#第二节估计量的评价标准" class="headerlink" title="第二节估计量的评价标准"></a>第二节估计量的评价标准</h2><h2 id="第三节区间估计"><a href="#第三节区间估计" class="headerlink" title="第三节区间估计"></a>第三节区间估计</h2><h1 id="第八章假设检验"><a href="#第八章假设检验" class="headerlink" title="第八章假设检验"></a>第八章假设检验</h1><h2 id="第一节概述"><a href="#第一节概述" class="headerlink" title="第一节概述"></a>第一节概述</h2><h2 id="第二节单个正态总体的假设检验"><a href="#第二节单个正态总体的假设检验" class="headerlink" title="第二节单个正态总体的假设检验"></a>第二节单个正态总体的假设检验</h2><h2 id="第三节两个正态总体的假设检验"><a href="#第三节两个正态总体的假设检验" class="headerlink" title="第三节两个正态总体的假设检验"></a>第三节两个正态总体的假设检验</h2><h2 id="第四节总体分布函数的假设检验"><a href="#第四节总体分布函数的假设检验" class="headerlink" title="第四节总体分布函数的假设检验"></a>第四节总体分布函数的假设检验</h2><h1 id="第九章方差分析"><a href="#第九章方差分析" class="headerlink" title="第九章方差分析"></a>第九章方差分析</h1><h2 id="第一节单因素试验的方差分析"><a href="#第一节单因素试验的方差分析" class="headerlink" title="第一节单因素试验的方差分析"></a>第一节单因素试验的方差分析</h2><h2 id="第二节双因素试验的方差分析"><a href="#第二节双因素试验的方差分析" class="headerlink" title="第二节双因素试验的方差分析"></a>第二节双因素试验的方差分析</h2><h2 id="三节正交试验设计及其方差分析"><a href="#三节正交试验设计及其方差分析" class="headerlink" title="三节正交试验设计及其方差分析"></a>三节正交试验设计及其方差分析</h2><h1 id="第十章回归分析"><a href="#第十章回归分析" class="headerlink" title="第十章回归分析"></a>第十章回归分析</h1><h2 id="第一节回归分析的概述"><a href="#第一节回归分析的概述" class="headerlink" title="第一节回归分析的概述"></a>第一节回归分析的概述</h2><h2 id="第二节参数估计"><a href="#第二节参数估计" class="headerlink" title="第二节参数估计"></a>第二节参数估计</h2><h2 id="第三节假设检验"><a href="#第三节假设检验" class="headerlink" title="第三节假设检验"></a>第三节假设检验</h2><h2 id="第四节预测与控制"><a href="#第四节预测与控制" class="headerlink" title="第四节预测与控制"></a>第四节预测与控制</h2><h2 id="第五节非线性回归的线性化处理"><a href="#第五节非线性回归的线性化处理" class="headerlink" title="第五节非线性回归的线性化处理"></a>第五节非线性回归的线性化处理</h2>]]></content>
+      
+      
+      
+        <tags>
+            
+            <tag> 考研 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
   
   
 </search>

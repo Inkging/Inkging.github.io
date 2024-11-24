@@ -6,7 +6,7 @@
   <link href="https://inkging.github.io/atom.xml" rel="self"/>
   
   <link href="https://inkging.github.io/"/>
-  <updated>2024-11-24T10:45:06.183Z</updated>
+  <updated>2024-11-24T11:56:45.100Z</updated>
   <id>https://inkging.github.io/</id>
   
   <author>
@@ -15,6 +15,19 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>test</title>
+    <link href="https://inkging.github.io/2024/11/24/test/"/>
+    <id>https://inkging.github.io/2024/11/24/test/</id>
+    <published>2024-11-24T11:56:45.000Z</published>
+    <updated>2024-11-24T11:56:45.100Z</updated>
+    
+    
+    
+    
+    
+  </entry>
   
   <entry>
     <title>计算机网络</title>

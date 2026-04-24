@@ -6,7 +6,7 @@
   <link href="https://inkging.github.io/atom.xml" rel="self"/>
   
   <link href="https://inkging.github.io/"/>
-  <updated>2024-11-24T11:56:45.100Z</updated>
+  <updated>2024-11-24T10:45:06.183Z</updated>
   <id>https://inkging.github.io/</id>
   
   <author>
@@ -15,19 +15,6 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
-  
-  <entry>
-    <title>test</title>
-    <link href="https://inkging.github.io/2024/11/24/test/"/>
-    <id>https://inkging.github.io/2024/11/24/test/</id>
-    <published>2024-11-24T11:56:45.000Z</published>
-    <updated>2024-11-24T11:56:45.100Z</updated>
-    
-    
-    
-    
-    
-  </entry>
   
   <entry>
     <title>计算机网络</title>
@@ -42,29 +29,6 @@
         
         
     <summary type="html">&lt;h1 id=&quot;第1章-概述&quot;&gt;&lt;a href=&quot;#第1章-概述&quot; class=&quot;headerlink&quot; title=&quot;第1章　概述&quot;&gt;&lt;/a&gt;第1章　概述&lt;/h1&gt;&lt;h2 id=&quot;1-1-计算机网络在信息时代中的作用&quot;&gt;&lt;a</summary>
-        
-      
-    
-    
-    
-    
-    <category term="考研" scheme="https://inkging.github.io/tags/%E8%80%83%E7%A0%94/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>高数目录</title>
-    <link href="https://inkging.github.io/2024/11/20/%E9%AB%98%E6%95%B0/"/>
-    <id>https://inkging.github.io/2024/11/20/%E9%AB%98%E6%95%B0/</id>
-    <published>2024-11-19T16:00:00.000Z</published>
-    <updated>2024-11-24T10:58:08.575Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;h1 id=&quot;第一章-函数与极限&quot;&gt;&lt;a href=&quot;#第一章-函数与极限&quot; class=&quot;headerlink&quot; title=&quot;第一章 函数与极限&quot;&gt;&lt;/a&gt;第一章 函数与极限&lt;/h1&gt;&lt;h2 id=&quot;第一节-映射与函数&quot;&gt;&lt;a href=&quot;#第一节-映射与函数&quot;</summary>
         
       
     
@@ -122,11 +86,34 @@
   </entry>
   
   <entry>
+    <title>高数目录</title>
+    <link href="https://inkging.github.io/2024/11/20/%E9%AB%98%E6%95%B0/"/>
+    <id>https://inkging.github.io/2024/11/20/%E9%AB%98%E6%95%B0/</id>
+    <published>2024-11-19T16:00:00.000Z</published>
+    <updated>2024-11-24T10:58:08.575Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h1 id=&quot;第一章-函数与极限&quot;&gt;&lt;a href=&quot;#第一章-函数与极限&quot; class=&quot;headerlink&quot; title=&quot;第一章 函数与极限&quot;&gt;&lt;/a&gt;第一章 函数与极限&lt;/h1&gt;&lt;h2 id=&quot;第一节-映射与函数&quot;&gt;&lt;a href=&quot;#第一节-映射与函数&quot;</summary>
+        
+      
+    
+    
+    
+    
+    <category term="考研" scheme="https://inkging.github.io/tags/%E8%80%83%E7%A0%94/"/>
+    
+  </entry>
+  
+  <entry>
     <title>2023年小结</title>
     <link href="https://inkging.github.io/2024/01/17/2023%E5%B9%B4%E5%B0%8F%E7%BB%93/"/>
     <id>https://inkging.github.io/2024/01/17/2023%E5%B9%B4%E5%B0%8F%E7%BB%93/</id>
     <published>2024-01-17T14:00:18.000Z</published>
-    <updated>2024-01-18T03:46:46.284Z</updated>
+    <updated>2026-04-24T05:10:34.421Z</updated>
     
     
     <summary type="html">Welcome to my blog, enter password to read.</summary>
